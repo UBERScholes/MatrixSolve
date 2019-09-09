@@ -1,6 +1,7 @@
 package DataStructures;
 
 import Exceptions.InputDataSizeException;
+import Utils.MatrixUtils;
 
 public class Matrix {
     private int[][] data;
@@ -10,26 +11,35 @@ public class Matrix {
     public Matrix(int width, int height) {
         this.width = width;
         this.height = height;
-        this.data = new int[width][height];
+        this.data = new int[height][width];
     }
 
     public void fill_Matrix(int[] input) throws InputDataSizeException, IllegalArgumentException {
-            if (this.data.length*this.data[0].length != input.length) {
-                throw new InputDataSizeException(this.data.length*this.data[0].length, input.length);
-            }
+            MatrixUtils.getInstance().checkInputSize(width, height, input);
             int count = 0;
             for (int i = 0; i < this.height; i++)
                 for (int j = 0; j < this.width; j++) {
-                    if(input[count]!=0&&input[count]!=1){
-                        throw new IllegalArgumentException("Only 1's and 0's are allowed for input");
-                    }
+                    MatrixUtils.getInstance().checkIsBinaryNum(input[count]);
                     this.data[i][j] = input[count];
                     count++;
                 }
         }
 
+    public void fill_Matrix(int[][] input) throws InputDataSizeException, IllegalArgumentException {
+        MatrixUtils.getInstance().checkInputSize(width, height, input);
+        for (int i = 0; i < this.height; i++)
+            for (int j = 0; j < this.width; j++) {
+                MatrixUtils.getInstance().checkIsBinaryNum(input[i][j]);
+                this.data[i][j] = input[i][j];
+            }
+    }
+
 
     public int[][] getData(){
         return this.data.clone();
+    }
+
+    public int[] getRow(int number){
+        return this.data[number];
     }
 }
