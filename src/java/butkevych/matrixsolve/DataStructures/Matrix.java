@@ -1,9 +1,9 @@
-package DataStructures;
+package butkevych.matrixsolve.DataStructures;
 
-import Exceptions.InputDataSizeException;
-import Utils.MatrixUtils;
+import butkevych.matrixsolve.Exceptions.InputDataSizeException;
+import butkevych.matrixsolve.Utils.MatrixUtils;
 
-public class Matrix {
+public class Matrix implements Cloneable{
     private int[][] data;
     private int width;
     private int height;
@@ -39,7 +39,8 @@ public class Matrix {
         return this.data.clone();
     }
 
-    public int[] getRow(int number){
-        return this.data[number];
+
+    public Matrix clone() throws CloneNotSupportedException {
+        return (Matrix)super.clone();
     }
 }

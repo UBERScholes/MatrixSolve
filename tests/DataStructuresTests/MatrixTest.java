@@ -1,7 +1,7 @@
 package DataStructuresTests;
 
-import DataStructures.Matrix;
-import Exceptions.InputDataSizeException;
+import butkevych.matrixsolve.DataStructures.Matrix;
+import butkevych.matrixsolve.Exceptions.InputDataSizeException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

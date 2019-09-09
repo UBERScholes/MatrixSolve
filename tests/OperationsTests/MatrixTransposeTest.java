@@ -1,8 +1,8 @@
 package OperationsTests;
 
-import DataStructures.Matrix;
-import Exceptions.InputDataSizeException;
-import Operations.MatrixTranspose;
+import butkevych.matrixsolve.DataStructures.Matrix;
+import butkevych.matrixsolve.Exceptions.InputDataSizeException;
+import butkevych.matrixsolve.Operations.MatrixTranspose;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,9 +1,9 @@
-package Operations;
+package butkevych.matrixsolve.Operations;
 
-import DataStructures.Matrix;
-import Exceptions.InputDataSizeException;
+import butkevych.matrixsolve.DataStructures.Matrix;
+import butkevych.matrixsolve.Exceptions.InputDataSizeException;
 
-public class MatrixTranspose implements MatrixOperations{
+public class MatrixTranspose implements Operation {
     @Override
     public Matrix execute(Matrix in) throws InputDataSizeException {
         int[][] data = in.getData();

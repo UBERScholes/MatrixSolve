@@ -1,7 +1,7 @@
 package UtilsTests;
 
-import Exceptions.InputDataSizeException;
-import Utils.MatrixUtils;
+import butkevych.matrixsolve.Exceptions.InputDataSizeException;
+import butkevych.matrixsolve.Utils.MatrixUtils;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

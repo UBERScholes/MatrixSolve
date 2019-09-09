@@ -1,6 +1,6 @@
-package Utils;
+package butkevych.matrixsolve.Utils;
 
-import Exceptions.InputDataSizeException;
+import butkevych.matrixsolve.Exceptions.InputDataSizeException;
 
 public class MatrixUtils {
     private static MatrixUtils instance;
